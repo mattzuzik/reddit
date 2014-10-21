@@ -12,6 +12,21 @@
 		<%= content_tag(:div, msg, class: 'alert alert-#{name}') %>
 	<% end %>
 
+
+	<% if user_signed_in? %>
+		<ul>
+			<li><%= link_to 'submit link', new_link_path %></li>
+			<li><%= link_to 'account', edit_user_registration_path %></li>
+			<li><%= link_to 'signout', destroy_user_session_path, method: 'delete' %></li>
+		</ul>
+
+	<% else %>
+		<ul>
+			<li><%= link_to 'signin', new_user_session_path %></li>
+			<li><%= link_to 'sign up', new_user_registration_path %></li>
+		</ul
+		<% end %>
+
 <%= yield %>
 
 </body>
