@@ -22,3 +22,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise', '~> 3.4.0'
+
+gem 'bootstrap-sass', '~> 3.2.0.2'
